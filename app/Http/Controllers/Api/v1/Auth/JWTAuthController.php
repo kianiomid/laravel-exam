@@ -37,4 +37,24 @@ class JWTAuthController extends Controller
 
         return JsonResponse::response($userJson, Lang::get('response.general.success'), 200, 200);
     }
+
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function login()
+    {
+        $rules = [
+            'email' => 'required|email',
+            'password' => 'required|string|min:6',
+        ];
+
+        $data = request()->only('email', 'password');
+
+        $this->validate(request(), $rules);
+
+        $newTokenJson = $this->userService->login($data);
+
+        return JsonResponse::response($newTokenJson, Lang::get('response.general.success'), 200, 200);
+    }
 }
