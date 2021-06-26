@@ -1,0 +1,21 @@
+* text=auto
+*.css linguist-vendored
+*.scss linguist-vendored
+*.js linguist-vendored
+CHANGELOG.md export-ignore
+
+/node_modules
+/public/.htaccess
+/storage/*.key
+/vendor
+.env
+.env.testing
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+/.idea
+/.idea/*
+
