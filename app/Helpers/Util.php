@@ -5,6 +5,18 @@ use App\Models\CultureType;
 Class Util
 {
     /**
+     * @param $variable
+     * @return bool
+     */
+    public static function is_set($variable)
+    {
+        if (!isset($variable) || is_null($variable) || $variable == '')
+            return false;
+        else
+            return true;
+    }
+
+    /**
      * @param $date
      * @param null $culture_desc
      * @param bool $db_format
