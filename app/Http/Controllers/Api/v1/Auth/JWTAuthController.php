@@ -57,4 +57,13 @@ class JWTAuthController extends Controller
 
         return JsonResponse::response($newTokenJson, Lang::get('response.general.success'), 200, 200);
     }
+
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function logout()
+    {
+        $this->userService->logout();
+        return JsonResponse::response([], Lang::get('response.general.success'), 200, 200);
+    }
 }

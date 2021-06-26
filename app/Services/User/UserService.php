@@ -64,4 +64,24 @@ class UserService
         return $newTokenJson;
     }
 
+    public function logout()
+    {
+        auth()->logout();
+
+        /*$rules = [
+            'token' => 'required',
+        ];
+
+        $this->validate(request(), $rules);
+
+        try {
+            JWTAuth::invalidate(request()->token);
+
+            return JsonResponse::response([], Lang::get('response.general.logged_out_successfully'), 200, 200);
+
+        } catch (JWTException $exception) {
+            throw new InternalErrorException(Lang::get('response.errors.sorry_the_user_cannot_be_logged_out'), 500);
+        }*/
+    }
+
 }
