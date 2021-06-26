@@ -4,6 +4,7 @@
 namespace App\JsonStructures\User;
 
 
+use App\Helpers\Util;
 use App\JsonStructures\Base\BaseJsonStructure;
 use App\JsonStructures\Base\JsonDictionary;
 
