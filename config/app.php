@@ -123,6 +123,9 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    //added custom config
+    'CULTURE_DESCRIPTION' => env('CULTURE_DESCRIPTION'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
