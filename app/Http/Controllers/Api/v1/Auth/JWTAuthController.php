@@ -58,6 +58,12 @@ class JWTAuthController extends Controller
         return JsonResponse::response($newTokenJson, Lang::get('response.general.success'), 200, 200);
     }
 
+    public function refresh()
+    {
+        $newTokenJson = $this->userService->refresh();
+        return JsonResponse::response($newTokenJson, Lang::get('response.general.success'), 200, 200);
+    }
+
     /**
      * @return \Illuminate\Http\JsonResponse
      */

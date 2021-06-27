@@ -64,6 +64,17 @@ class UserService
         return $newTokenJson;
     }
 
+    public function refresh()
+    {
+        $newTokenJson = null;
+        $newTokenJson = (new NewTokenJson([
+            JsonDictionary::TOKEN => auth()->refresh(),
+            JsonDictionary::CULTURE_DESCRIPTION => $this->cultureDescription
+        ]))->toArray();
+
+        return $newTokenJson;
+    }
+
     public function logout()
     {
         auth()->logout();
