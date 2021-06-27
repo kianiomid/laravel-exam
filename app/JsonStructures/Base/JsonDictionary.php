@@ -11,6 +11,7 @@ class JsonDictionary
     const NS_ACCESS_TOKEN = 'access_token';
     const NS_TOKEN_TYPE = 'token_type';
     const NS_EXPIRE_IN = 'expire_in';
+    const NS_USERS = 'users';
 
     //Keys
     const RETURN_CODE = 'return_code';
@@ -33,5 +34,12 @@ class JsonDictionary
     const TOKEN = 'token';
     const USER = 'user';
     const CULTURE_DESCRIPTION = 'culture_description';
+    const PAGINATION = 'pagination';
+    const LAST_PAGE = 'last_page';
+    const PER_PAGE = 'per_page';
+    const CURRENT_PAGE = 'current_page';
+    const PATH = 'path';
+    const TOTAL = 'total';
+    const USERS = 'users';
 
 }

@@ -14,6 +14,7 @@ return [
         'access_denied' => 'خطای عدم دسترسی!',
         'error_storing_for_information' => 'خطا در ذخیره اطلاعات',
         'sorry_the_user_cannot_be_logged_out' => 'متاسفانه کاربر نمی تواند خارج شود.',
+        'unauthorized' => 'دسترسی غیرمجاز',
 
         'proposal' => [
             'project_not_available'   => 'متأسفیم، اما شغلی که می خواهید اعمال کنید دیگر در دسترس نیست.',

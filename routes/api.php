@@ -18,6 +18,7 @@ Route::group([
 
     /* User */
     $router->group(['prefix' => 'user'], function ($router){
-        $router->get('/profile', [UserController::class, 'userProfile'])->name('user.profile');
+        $router->get('index', [UserController::class, 'index'])->name('user.index');
+        $router->get('profile', [UserController::class, 'userProfile'])->name('user.profile');
     });
 });

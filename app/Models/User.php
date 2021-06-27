@@ -12,6 +12,8 @@ class User extends Authenticatable implements JWTSubject
 {
     use HasFactory, Notifiable;
 
+    const PAGINATION = 10;
+
     /**
      * The attributes that are mass assignable.
      *

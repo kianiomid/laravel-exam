@@ -61,4 +61,12 @@ class UserRepository implements RepositoryInterface
     {
         //
     }
+
+    /**
+     * @return mixed
+     */
+    public function getUserList()
+    {
+        return User::latest()->paginate(User::PAGINATION);
+    }
 }
