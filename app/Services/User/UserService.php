@@ -95,4 +95,18 @@ class UserService
         }*/
     }
 
+    /**
+     * @return array
+     */
+    public function userProfile()
+    {
+        $userJson = null;
+        $userJson = (new UserJson([
+            JsonDictionary::USER => auth()->user(),
+            JsonDictionary::CULTURE_DESCRIPTION => $this->cultureDescription
+        ]))->toArray();
+
+        return $userJson;
+    }
+
 }
