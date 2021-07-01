@@ -47,5 +47,6 @@ class JsonDictionary
     const RECEPTOR = 'receptor';
     const DATE = 'date';
     const COST = 'cost';
+    const MOBILE = 'mobile';
 
 }

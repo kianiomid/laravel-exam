@@ -36,6 +36,7 @@ class UserJson extends BaseJsonStructure
                 JsonDictionary::ID => $user->getAttribute('id'),
                 JsonDictionary::NAME => $user->getAttribute('name'),
                 JsonDictionary::EMAIL => $user->getAttribute('email'),
+                JsonDictionary::MOBILE => $user->getAttribute('mobile'),
                 JsonDictionary::CREATED_AT => Util::i18n_date2($user->getAttribute('created_at'), $cultureDesc, false, null, false, false, false, false),
                 JsonDictionary::UPDATED_AT => Util::i18n_date2($user->getAttribute('updated_at'), $cultureDesc, false, null, false, false, false, false),
                 JsonDictionary::CREATED_AT_RAW => Util::i18n_date2($user->getAttribute('created_at'), $cultureDesc, false, null, false, false, false, true),
