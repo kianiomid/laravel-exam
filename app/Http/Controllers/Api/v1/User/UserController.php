@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Api\v1\User;
 
+use App\Http\Controllers\BaseController;
 use App\Http\Controllers\Controller;
 use App\JsonStructures\Base\JsonDictionary;
 use App\JsonStructures\Base\JsonResponse;
 use App\Services\User\UserService;
 use Illuminate\Support\Facades\Lang;
 
-class UserController extends Controller
+class UserController extends BaseController
 {
     private $userService;
 
@@ -20,8 +21,28 @@ class UserController extends Controller
     }
 
     /**
-     * @return \Illuminate\Http\JsonResponse
-     */
+     * @OA\Get(
+     ** path="/v1/user/index",
+     *   tags={"User-Index"},
+     *   summary="User Index",
+     *   operationId="user",
+     *
+     *   @OA\Response(
+     *      response=200,
+     *      description="Success",
+     *      @OA\JsonContent(@OA\Property(property="data", type="array", @OA\Items(ref="#/components/schemas/Users")))
+     *   ),
+     *   @OA\Response(
+     *      response=401,
+     *       description="Unauthenticated"
+     *   ),
+     *
+     *   @OA\Response(
+     *      response=404,
+     *      description="not found"
+     *   ),
+     *)
+     **/
     public function index()
     {
         $users = $this->userService->index();
