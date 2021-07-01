@@ -3,8 +3,8 @@
 - Mysql >= 12.0
 
 ## 2.Installation
-- run $`git clone git@git.liferey.com:ndp/dentist.git dentist-backend`
-- run $`cd dentist-backend`
+- run $`git clone https://github.com/kianiomid/laravel-exam.git`
+- run $`cd laravel-exam`
 - run $`composer install`
 
 ## 3.Setup your enviroment variables in .env
