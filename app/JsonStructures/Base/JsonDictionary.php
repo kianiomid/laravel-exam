@@ -41,5 +41,11 @@ class JsonDictionary
     const PATH = 'path';
     const TOTAL = 'total';
     const USERS = 'users';
+    const MESSAGEID = 'messageid';
+    const STATUSTEXT = 'statustext';
+    const SENDER = 'sender';
+    const RECEPTOR = 'receptor';
+    const DATE = 'date';
+    const COST = 'cost';
 
 }
