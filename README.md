@@ -1,28 +1,58 @@
-## 1.Requirements
-- PHP >= 7.3
-- Mysql >= 12.0
+# Getting started
 
+<<<<<<< HEAD
 ## 2.Installation
 - run $`git clone https://github.com/kianiomid/laravel-exam.git`
 - run $`cd laravel-exam`
 - run $`composer install`
+=======
+## Installation
+>>>>>>> dev
 
-## 3.Setup your enviroment variables in .env
-- run $`cp .env-sample .env`
-- edit the `.env` file and set the required database connection data
+Clone the repository
 
-## 4.Migration/Seed The Database
-### Migrate phase 🙂
-- `php artisan migrate`
+    git clone https://github.com/kianiomid/laravel-exam.git
 
+Switch to the repo folder
 
-### Seed phase
-- `php artisan db:seed`
+    cd laravel-exam
 
-## 5.Generate App key
-- run $`php artisan key:generate`
+Install all the dependencies using composer
 
-## Module Installed 
-* JWT
-* Swagger
-* Kavenegar
+    composer install
+
+Copy the example env file and make the required configuration changes in the .env file
+
+    cp .env.example .env
+
+Generate a new application key
+
+    php artisan key:generate
+
+Generate a new JWT authentication secret key
+
+    php artisan jwt:generate
+
+Run the database migrations (**Set the database connection in .env before migrating**)
+
+    php artisan migrate
+    
+Run the database seed
+    
+    php artisan db:seed
+
+Start the local development server
+
+    php artisan serve
+
+You can now access the server at http://localhost:8000
+
+----------
+
+## Dependencies
+
+- [jwt-auth](https://github.com/tymondesigns/jwt-auth) - For authentication using JSON Web Tokens
+- [kavenegar](https://github.com/kavenegar) - For send sms
+- [predis](https://laravel.com/docs/8.x/redis)
+- [swagger](https://github.com/DarkaOnLine/L5-Swagger)
+

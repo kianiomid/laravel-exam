@@ -7,6 +7,7 @@ use App\JsonStructures\Base\JsonDictionary;
 use App\JsonStructures\Base\JsonResponse;
 use App\Services\SMS\SmsInterface;
 use App\Services\User\UserService;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Lang;
 
 class SmsController extends Controller
@@ -40,6 +41,7 @@ class SmsController extends Controller
 
 //        $receptor = $userMobile;
          $receptor = ["09331116877"];
+
         $message = Lang::get('texts.kavenegar.sms_service');
 
         $smsInfo = $this->sms->sendSms($receptor, $message);
