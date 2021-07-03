@@ -1,13 +1,11 @@
 # Getting started
 
-<<<<<<< HEAD
 ## 2.Installation
 - run $`git clone https://github.com/kianiomid/laravel-exam.git`
 - run $`cd laravel-exam`
 - run $`composer install`
-=======
+
 ## Installation
->>>>>>> dev
 
 Clone the repository
 
